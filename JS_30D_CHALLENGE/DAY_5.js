@@ -2,7 +2,7 @@
 
 //Task 1: Write a function to check if a number is even or odd and log the result to the console.
 function oddOrEven(num) {
-  if (num % 2 == 0) {
+  if (num % 2 === 0) {
     console.log("Even");
   } else {
     console.log("Odd");
@@ -19,21 +19,21 @@ console.log(calculateSquare(5));
 
 //Activity 2: Function Expression
 
-//Task 3: Write a function expression to find the maximun of two numbers and log the result to the console.
-let findmax = function (num1, num2) {
+//Task 3: Write a function expression to find the maximum of two numbers and log the result to the console.
+let find = function (num1, num2) {
   if (num1 > num2) {
     console.log(`${num1} is greater than ${num2}`);
   } else {
     console.log(`${num2} is greater than ${num1}`);
   }
 };
-findmax(5, 10);
+find(5, 10);
 
 //Task 4: Write a function expression to concatenate two strings and return the result.
 let concatenate = function (str1, str2) {
   return str1 + str2;
 };
-console.log(concatenate("Dam", "odar"));
+console.log(concatenate("Dam", "odor"));
 
 //Activity 3: Arrow Functions
 
@@ -47,7 +47,7 @@ console.log(sumOfTwoNumbers(5, 2));
 const checkCharacter = (str, char) => {
   return str.includes(char);
 };
-console.log(checkCharacter("Damodar", "a"));
+console.log(checkCharacter("Damara", "a"));
 
 //Activity 4: Function Parameters and Default Values
 
@@ -80,9 +80,7 @@ callFunctionXTimes(sayHello, 4);
 function applyFunctions(func1, func2, value) {
   const firstResult = func1(value);
 
-  const finalResult = func2(firstResult);
-
-  return finalResult;
+  return func2(firstResult);
 }
 
 function multiplyByTwo(x) {
