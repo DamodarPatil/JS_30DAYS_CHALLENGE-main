@@ -98,5 +98,3 @@ for (const key in Book5) {
 //Task 9:
 console.log(Object.keys(Book5));
 console.log(Object.values(Book5));
-
-
