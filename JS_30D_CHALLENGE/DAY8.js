@@ -58,7 +58,7 @@ let person = {
 person.greet();
 console.log(person);
 
-//Task 9:create an object with computed property names based on varibles and log the object the the console.
+//Task 9:
 let key1 = "name";
 let key2 = "age";
 
