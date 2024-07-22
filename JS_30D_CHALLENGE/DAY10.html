@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="changeMe">Lorem ipsum dolor sit amet.</p>
+
+    <button id="changeText">Click Me</button>
+
+    <img
+      width="200px"
+      id="sampleImage"
+      src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+      alt="Sample Image"
+    />
+
+    <p id="changeColor">Change my background-color</p>
+
+    <input type="text" id="inputField" />
+
+    <form id="myForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <select id="selectDropdown">
+      <option value="Option 1">Option 1</option>
+      <option value="Option 2">Option 2</option>
+      <option value="Option 3">Option 3</option>
+    </select>
+    <p id="displayParagraph"></p>
+
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </body>
+  <script>
+    // Activity 1: Basic Event Handling
+    // Task 1:
+    document.querySelector("#changeText").addEventListener("click", () => {
+      document.querySelector("#changeMe").textContent = "Hello word";
+    });
+    // Task 2:
+    document.querySelector("#sampleImage").addEventListener("dblclick", () => {
+      document.querySelector("#sampleImage").style.display = "none";
+    });
+
+    // Activity 2: Mouse Events
+    // Task 3:
+    document.querySelector("#changeColor").addEventListener("mouseover", () => {
+      document.querySelector("#changeColor").style.backgroundColor = "red";
+    });
+    // Task 4:
+    document.querySelector("#changeColor").addEventListener("mouseout", () => {
+      document.querySelector("#changeColor").style.backgroundColor = "white";
+    });
+
+    // Activity 3: Keyboard Events
+    // Task 5:
+    document
+      .querySelector("#inputField")
+      .addEventListener("keydown", (event) => {
+        console.log(event.key);
+      });
+    // Task 6:
+    document.querySelector("#inputField").addEventListener("keyup", (event) => {
+      console.log(event.key);
+    });
+
+    // Activity 4: Form Events
+    // Task 7:
+    document.querySelector("#myForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      const formProps = Object.fromEntries(formData);
+      console.log(formProps);
+    });
+    // Task 8:
+    document
+      .querySelector("#selectDropdown")
+      .addEventListener("change", (event) => {
+        document.querySelector("#displayParagraph").textContent =
+          event.target.value;
+      });
+
+    // Activity 5: Event Delegation
+    // Task 9:
+    document.querySelector("#list").addEventListener("click", (event) => {
+      if (event.target.tagName === "LI") {
+        console.log(event.target.textContent);
+      }
+    });
+    // Task 10:
+    document.querySelector("#list").addEventListener("click", (event) => {
+      if (event.target.tagName === "LI") {
+        console.log(event.target.textContent);
+      }
+    });
+  </script>
+</html>
